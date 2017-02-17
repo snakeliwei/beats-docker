@@ -5,7 +5,7 @@ ENV FILEBEAT_VERSION=5.2.1 \
     GLIBC_VERSION=2.25-r0
 
 # Install glibc
-RUN apk add --no-cache --virtual .build-deps ca-certificates wget libgcc \
+RUN apk --update add --no-cache --virtual .build-deps ca-certificates wget libgcc \
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
     && wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk \
     && wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk \
