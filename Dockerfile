@@ -1,4 +1,5 @@
 FROM alpine:3.5
+MAINTAINER Lyndon.li <snakeliwei@gmail.com>
 
 ENV FILEBEAT_VERSION=5.2.1 \
     FILEBEAT_SHA1=694fe12e56ebf8e4c4b11b590cfb46c662e7a3c1 \
