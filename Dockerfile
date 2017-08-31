@@ -7,6 +7,7 @@ RUN addgroup -S filebeat && adduser -S -G filebeat filebeat \
     && mkdir -p /config-dir
 
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
