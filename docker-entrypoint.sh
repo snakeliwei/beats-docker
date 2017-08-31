@@ -1,5 +1,6 @@
 #!/bin/sh
 chown -R filebeat /config-dir
+chmod -R go-w /config-dir
 
 # first arg is `-f` or `--some-option`
 if [ "${1#-}" != "$1" ]; then
