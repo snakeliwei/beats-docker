@@ -1,5 +1,5 @@
 #!/bin/sh
-chown -R filebeat /config-dir
+chown -R filebeat:filebeat /config-dir
 chmod -R go+r /var/log
 chmod -R go-w /config-dir
 
