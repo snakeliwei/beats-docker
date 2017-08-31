@@ -1,5 +1,6 @@
 #!/bin/sh
 chown -R filebeat /config-dir
+chmod -R go+r /var/log
 chmod -R go-w /config-dir
 
 # first arg is `-f` or `--some-option`
